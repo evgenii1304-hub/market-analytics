@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://market-analytics-pi.vercel.app/sitemap.xml
