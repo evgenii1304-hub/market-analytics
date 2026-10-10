@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Контур продаж — аналитика магазинов</title><meta name="description" content="Локальный прототип аналитики Wildberries и Ozon"><link rel="stylesheet" href="/style.css"><script src="/app.js" defer></script></head>
+<body>
+<aside class="sidebar">
+  <a class="brand" href="/" aria-label="Контур продаж, главная"><span class="brand-icon">к</span><span>контур<span class="brand-sub">ПРОДАЖ</span></span></a>
+  <div class="workspace"><span class="avatar">М</span><div>Мои магазины<small>Рабочее пространство</small></div><span class="workspace-dot"></span></div>
+  <div class="nav-label">АНАЛИТИКА</div>
+  <nav aria-label="Разделы">
+    <button data-page="overview" class="active"><span>◫</span>Обзор бизнеса</button>
+    <button data-page="products"><span>▦</span>Товары</button>
+    <button data-page="ads"><span>↗</span>Реклама</button>
+    <button data-page="finance"><span>≋</span>Финансы</button>
+    <button data-page="expenses"><span>＋</span>Расходы и стоимость</button>
+    <button data-page="integrations"><span>⇄</span>Подключения<span class="count">5</span></button>
+    <button data-page="roadmap"><span>◇</span>План разработки</button>
+  </nav>
+  <div class="sidebar-bottom"><span class="local-dot"></span> Локальная версия 0.1<small>Данные на этом компьютере</small></div>
+</aside>
+<main>
+  <header><div class="breadcrumb">Рабочее пространство <span>/</span> <span id="crumb">Обзор бизнеса</span></div><div class="header-right"><span class="outline-badge">Разработка</span><span class="avatar small">В</span></div></header>
+  <div class="content">
+    <div id="notice" class="notice"></div>
+    <div class="heading"><div><div class="eyebrow">WILDBERRIES + OZON</div><h1 id="title">Обзор бизнеса</h1><p id="subtitle">Все магазины. Одна картина бизнеса.</p></div><button id="export" class="button secondary">↓ Экспорт операций</button></div>
+    <div class="toolbar"><div class="mode-switch" aria-label="Источник данных"><button id="demo-mode" class="selected">Демо</button><button id="local-mode">Мои данные</button></div><select id="account" aria-label="Кабинет"><option value="">Все 5 кабинетов</option></select><div class="date-range"><input id="start" type="date" value="2026-09-01" aria-label="Начало периода"><span>—</span><input id="end" type="date" value="2026-09-30" aria-label="Конец периода"></div><button id="refresh" class="button secondary">Обновить</button></div>
+    <div id="error" class="error" role="alert" hidden></div>
+    <div id="page" aria-live="polite"><div class="empty">Загружаем локальные данные…</div></div>
+    <footer>Управленческая аналитика · RUB <span>Каждая сумма должна иметь источник</span></footer>
+  </div>
+</main>
+<div id="toast" role="status" hidden></div>
+</body></html>
